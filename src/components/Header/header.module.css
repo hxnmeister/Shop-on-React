@@ -1,0 +1,10 @@
+.navPanel
+{
+    text-align: center;
+    background-color: #a8f9ff;
+}
+.navPanel > a
+{
+    color: #05668d;
+    margin-right: 15px;
+}
