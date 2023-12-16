@@ -1,0 +1,8 @@
+.productInfo
+{
+    margin-left: 20px;
+}
+.productInfo > img
+{
+    width: 20%;
+}

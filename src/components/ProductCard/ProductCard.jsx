@@ -2,7 +2,7 @@ import React from 'react';
 import style from './productCard.module.css';
 import { Link } from 'react-router-dom';
 
-const ProductCard = ({products}) => 
+const ProductCard = ({products, size = '10em'}) => 
 {
     return (
         <>
@@ -11,8 +11,8 @@ const ProductCard = ({products}) =>
                 {
                     return(
                     <Link to={`/product/${product.id}`} key={product.id}>
-                        <li className={style.productCard}>
-                            <img src={product.image} alt={product.title}/>
+                        <li className={style.productCard} style={{width: size}}>
+                            <img src={product.image} alt={product.title} className={style.productImage}/>
                             <span>Rate: {product.rating.rate}</span>
                             <span>{product.title}</span>
                             <span>{product.price}$</span>

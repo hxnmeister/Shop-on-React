@@ -7,10 +7,8 @@
 }
 .productCard
 {
-    width: 10em;
-
-    background-color: #07425f;
-    color: #d9f1fc;
+    background-color: #d9f1fc;
+    color: #07425f;
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;

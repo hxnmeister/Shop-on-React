@@ -24,8 +24,8 @@ const Header = () =>
             <NavLink to={'/'}>HOME</NavLink>
             {categories.map( (category, index) => <NavLink to={`/${category}`} key={index}>{category.toUpperCase()}</NavLink> )}
             <br />
-            <input type="text" value={searchingText} onChange={ (e) => setSearchingText(e.target.value) }/>
-            <Link to={`/searching-results/${searchingText}`}><button>Find</button></Link>
+            <input type="text" value={searchingText} onChange={ (e) => setSearchingText(e.target.value) } className={style.findInput}/>
+            <Link to={`/searching-results/${searchingText}`}><button className={style.findButton}>Find</button></Link>
         </div>
     );
 }

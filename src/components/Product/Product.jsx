@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import style from './product.module.css';
 
 const Product = () => 
 {
@@ -19,7 +20,7 @@ const Product = () =>
     }
 
     return (
-        <div>
+        <div className={style.productInfo}>
             <h1>{product.title}</h1>
             <h3>Category: <Link to={`/${product.category}`}>{product.category.toUpperCase()}</Link></h3>
             <img src={product.image} alt={product.title} />
