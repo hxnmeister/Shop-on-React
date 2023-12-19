@@ -23,17 +23,17 @@ const Category = () =>
         Large: '20em'
     }
 
-    const {category} = useParams();
+    const {id} = useParams();
     const [products, setProducts] = useState(null);
     const [sorting, setSorting] = useState('Default');
     const [size, setSize] = useState(SIZING_OPTIONS.Default);
     
-    const getProducts = async () => setProducts((await axios(`https://fakestoreapi.com/products/category/${category}`)).data);
+    const getProducts = async () => setProducts((await axios(`https://fakestoreapi.com/products/category/${id}`)).data);
     
     useEffect(() =>
     {
         getProducts();
-    }, [category]);
+    }, [id]);
     
     if(!products)
     {

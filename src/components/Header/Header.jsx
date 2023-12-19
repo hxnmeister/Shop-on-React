@@ -1,12 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useSearchParams } from 'react-router-dom';
 import style from './header.module.css';
 
 const Header = () => 
 {
     const [categories, setCategories] = useState(null);
     const [searchingText, setSearchingText] = useState('');
+    
     const getCategories = async () => setCategories((await axios("https://fakestoreapi.com/products/categories")).data);
 
     useEffect(() =>

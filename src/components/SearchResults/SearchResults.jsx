@@ -5,7 +5,7 @@ import ProductCard from '../ProductCard/ProductCard';
 
 const SearchResults = () => 
 {
-    const {query} = useParams();
+    const { query } =  useParams();
     const [products, setProducts] = useState(null);
     const getProducts = async () => setProducts((await axios("https://fakestoreapi.com/products")).data);
 

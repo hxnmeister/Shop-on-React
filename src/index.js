@@ -15,6 +15,7 @@ const router = createBrowserRouter
     {
       path: '/',
       element: <App/>,
+      errorElement: <h1>Not Found!!!</h1>,
       children:
       [
         {
@@ -22,7 +23,7 @@ const router = createBrowserRouter
           element: <RandomProducts/>
         },
         {
-          path: '/:category',
+          path: '/category/:id',
           element: <Category/>
         },
         {
